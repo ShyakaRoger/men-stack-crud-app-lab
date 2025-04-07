@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- update the header -->
+    <h1>Edit <%= cloth.name %></h1>
+    <form action="/clothes/<%=cloth._id%>?_method=PUT" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= cloth.name %>" />
+      <label for="isReadyToWear">is Ready to Wear?</label>
+      <input
+            type="checkbox"
+            name="isReadyToWear"
+            id="isReadyToWear"
+            <% if (cloth.isReadyToWear){%>checked<% } %> />
+        <button type="submit">Update Cloth</button>
+    </form>
+    <a href="views/clothes">Back to Clothes</a>
+  </body>
+</html>
+

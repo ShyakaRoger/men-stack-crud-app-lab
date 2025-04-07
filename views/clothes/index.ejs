@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothes Index</title>
+  </head>
+  <body>
+    <h1>All Clothes</h1>
+    <a href="/clothes/new">Add New cloth</a>
+
+    <ol>
+        <% clothes.forEach(cloth => { %>
+          <li><a href="/clothes/<%= cloth._id %>"><%= cloth.name %></a></li>
+        <% }); %>
+    </ol>
+
+  </body>
+</html>

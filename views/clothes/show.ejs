@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= cloth.name %></title>
+  </head>
+  <body>
+    <h1><%= cloth.name %></h1>
+    <% if (cloth.isReadyToWear){ %>
+        <p> the cloth is ready to wear?</p>
+
+    <%}else {%>
+        <p>This cloth is not for sports</p>
+        <%}%>
+<form action="/clothes/<%=cloth._id%>?_method=DELETE" method="POST">
+  <button type="submit">Delete <%= cloth.name %></button>
+</form>
+
+<a href="/clothes/<%= cloth._id %>/edit">Edit <%= cloth.name %></a>
+
+        
+<a href="/clothes">Back to clothes</a>
+
+  </body>
+</html>

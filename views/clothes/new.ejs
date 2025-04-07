@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>creating a Cloth</title>
+    </head>
+    <body>
+        <h1>create a new Cloth!</h1>
+        <h3>add any of your favorite sport outfit</h3>
+        <form action="/clothes" method="POST">
+            <label for="name">Cloth Name:</label>
+            <input type="text" name="name" id="name" />
+
+            <label for="isReadyToWear">Ready to wear?</label>
+            <input type="checkbox" name="isReadyToWear" id='isReadyToWear' />
+
+            <button type="submit">Add Cloth</button>
+    </form>
+    <a href="/clothes">Back to clothes</a>
+  </body>
+</html>
